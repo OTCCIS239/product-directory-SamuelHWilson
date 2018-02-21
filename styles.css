@@ -1,0 +1,58 @@
+body {
+    background-image: url("res/bg.jpg");
+    background-attachment: fixed;
+    font-size: 1.2em;
+    font-family: "Roboto Slab", Serif
+}
+p {
+    margin: 0px;
+}
+
+a {
+    color: #E32929;
+}
+a:hover, .active {
+    color:#9E1C1C
+}
+
+.sj-invert-text {
+    background-color: #E32929;
+    color: #FFFDFA;
+}
+
+.navbar {
+    background-color: #FFFDFA;
+    border: 0px solid #E32929;
+    border-bottom-width: 2px;
+}
+.navbar .navbar-brand, .navbar .nav-link {
+    color: #E32929;
+}
+.navbar .nav-link:hover, .navbar .active {
+    color: #9E1C1C;
+}
+
+.display-area {
+    border: 2px solid #E32929;
+    background-color: #FFFDFA;
+    border-radius: 20px;
+}
+.display-area .price {
+    display: inline-block;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    line-height: 1em;
+    padding: 0px 3px;
+}
+.display-area .category-list {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0px 1px 0px;
+}
+.display-area p {
+    text-align: center;
+}
+.display-area .product-entry {
+    border-bottom: 1px solid black;
+}
