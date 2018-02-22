@@ -3,7 +3,7 @@
 
     $cid = filter_input(INPUT_GET, "category_id");
 
-    if($cid != null & $cid != false) {
+    if($cid != null & $cid != false & $cid != 0) {
         $products = GetMany("SELECT * FROM Products WHERE category_id = :category_id", $conn, [
             ":category_id"=>$cid
         ]);
@@ -59,6 +59,18 @@
                 <!-- Example row of columns -->
                 <div class="row">
                     <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-header">
+                                Filter by...
+                            </div>
+                            <div class="card-body">
+                                <p class="card-title">Categories</p>
+                                <p class="pl-3"><a class="<?php if($cid == 0) echo "text-secondary"?>" href="?category_id=0">All</a></p>
+                                <p class="pl-3"><a class="<?php if($cid == 1) echo "text-secondary"?>" href="?category_id=1">Salty</a></p>
+                                <p class="pl-3"><a class="<?php if($cid == 2) echo "text-secondary"?>" href="?category_id=2">Sweet</a></p>
+                                <p class="pl-3"><a class="<?php if($cid == 3) echo "text-secondary"?>" href="?category_id=3">Beverage</a></p>
+                            </div>
+                        </div>                            
                     </div>
                     <div class="col-md-8">
                         <div class="row">
