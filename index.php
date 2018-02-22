@@ -58,20 +58,27 @@
             <div class="container">
                 <!-- Example row of columns -->
                 <div class="row">
-                    <div class="col-md-4">
-                        <h2>Heading</h2>
-                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <div class="col-md-3">
                     </div>
-                    <div class="col-md-4">
-                        <h2>Heading</h2>
-                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <?php foreach($products as $product): ?>
+                                <div class="col-4 mb-3">
+                                    <div class="card product-entry">
+                                        <div class="card-body">
+                                            <h2 class="card-title h4 text-primary"><?= $product["name"] ?></h5>
+                                            <p class="card-text"><?= $product["description"] ?></p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="badge badge-dark"><?= "$".number_format($product["price"], 2) ?></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <h2>Heading</h2>
-                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <div class="col-md">
+                        
                     </div>
                 </div>
 
